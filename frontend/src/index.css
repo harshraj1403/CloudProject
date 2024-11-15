@@ -1,0 +1,460 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* Root Colors */
+:root {
+  --primary: #5a67d8; /* Deep indigo */
+  --primary-hover: #434c9c; /* Darker indigo */
+  --secondary: #2d3748; /* Dark slate gray */
+  --background: #edf2f7; /* Light gray-blue */
+  --card-bg: #ffffff; /* White for card backgrounds */
+  --border: #cbd5e0; /* Light gray for borders */
+  --error: #e53e3e; /* Red for errors */
+  --error-hover: #c53030; /* Darker red */
+  --shadow-light: rgba(0, 0, 0, 0.08); /* Light shadow */
+  --shadow-dark: rgba(0, 0, 0, 0.15); /* Dark shadow */
+  --gradient: linear-gradient(135deg, #5a67d8, #434c9c); /* Primary gradient */
+}
+
+/* Global Styles */
+body {
+  background: var(--background);
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--secondary);
+}
+h4,
+h1,
+p,
+a {
+  margin: 0;
+  color: var(--secondary);
+}
+
+/* Header */
+header {
+  background: var(--card-bg);
+  box-shadow: 0px 4px 10px var(--shadow-light);
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+header a:hover {
+  color: var(--primary);
+}
+
+/* Content Layout */
+.pages {
+  max-width: 1400px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+/* Homepage Grid */
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 40px;
+}
+
+/* Course Details Card */
+.course-details {
+  background: var(--card-bg);
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 25px;
+  position: relative;
+  box-shadow: 0px 6px 12px var(--shadow-light);
+  transition: transform 0.3s, box-shadow 0.3s ease;
+}
+.course-details:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px var(--shadow-dark);
+}
+.course-details h4 {
+  font-size: 1.4em;
+  color: var(--primary);
+  font-weight: 600;
+}
+.course-details p {
+  font-size: 1em;
+  color: #555;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+/* Icon Buttons */
+.course-details .edit-icon,
+.course-details .delete-icon {
+  position: absolute;
+  top: 20px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  box-shadow: 0px 4px 8px var(--shadow-light);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.course-details .edit-icon {
+  right: 70px;
+  color: var(--primary);
+}
+.course-details .edit-icon:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: scale(1.1);
+}
+.course-details .delete-icon {
+  right: 20px;
+  color: var(--error);
+}
+.course-details .delete-icon:hover {
+  background: var(--error);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* New Course Form */
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+input {
+  padding: 12px;
+  margin: 10px 0 20px;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 5px var(--primary);
+}
+form button {
+  background: var(--gradient);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.2s ease;
+}
+form button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+div.error {
+  padding: 10px;
+  background: #ffebeb;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 6px;
+  margin: 15px 0;
+}
+input.error {
+  border: 1px solid var(--error);
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+}
+nav a {
+  margin-left: 15px;
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: var(--primary);
+}
+nav button {
+  background: var(--card-bg);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 15px;
+  font-size: 1em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+nav button:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Authentication Forms */
+form.signup,
+form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px var(--shadow-light);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+form.signup:hover,
+form.login:hover {
+  box-shadow: 0px 8px 16px var(--shadow-dark);
+  transform: translateY(-3px);
+}
+/* Default button styling */
+.custom-button {
+  padding: 0.5rem 2rem; /* Equivalent to px-8 py-2 in Tailwind */
+  border-radius: 0.375rem; /* Equivalent to rounded-md in Tailwind */
+  background-color: #14b8a6; /* Equivalent to bg-teal-500 in Tailwind */
+  color: white; /* Equivalent to text-white in Tailwind */
+  font-weight: bold; /* Equivalent to font-bold in Tailwind */
+  border: 2px solid transparent; /* Default border style */
+  cursor: pointer;
+  transition: all 0.2s ease; /* Equivalent to transition duration-200 in Tailwind */
+}
+
+/* Hover effect */
+.custom-button:hover {
+  background-color: white; /* Equivalent to hover:bg-white in Tailwind */
+  color: black; /* Equivalent to hover:text-black in Tailwind */
+  border-color: #14b8a6; /* Equivalent to hover:border-teal-500 in Tailwind */
+}
+
+/* Button container */
+.border-magic-button {
+  position: relative;
+  display: inline-flex;
+  height: 3rem; /* Equivalent to h-12 */
+  overflow: hidden;
+  border-radius: 9999px; /* Equivalent to rounded-full */
+  padding: 1px; /* Equivalent to p-[1px] */
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.border-magic-button:focus {
+  ring: 2px solid #cbd5e1; /* Equivalent to focus:ring-2 focus:ring-slate-400 */
+  ring-offset: 2px; /* Equivalent to focus:ring-offset-2 */
+  ring-offset-color: #f8fafc; /* Equivalent to focus:ring-offset-slate-50 */
+}
+
+/* Spinning gradient */
+.border-magic-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  inset: -1000%; /* Equivalent to inset-[-1000%] */
+  animation: spin 2s linear infinite; /* Equivalent to animate-[spin_2s_linear_infinite] */
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    #e2cbff 0%,
+    #393bb2 50%,
+    #e2cbff 100%
+  );
+}
+
+/* Text styling and background */
+.border-magic-text {
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px; /* Equivalent to rounded-full */
+  background-color: #1e293b; /* Equivalent to bg-slate-950 */
+  padding: 0.25rem 0.75rem; /* Equivalent to px-3 py-1 */
+  font-size: 0.875rem; /* Equivalent to text-sm */
+  font-weight: 500; /* Equivalent to font-medium */
+  color: white;
+  backdrop-filter: blur(10px); /* Equivalent to backdrop-blur-3xl */
+}
+
+/* Animation for the spinning gradient */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Navbar Container */
+.navbar-container {
+  width: 100%;
+  background-color: #333;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Content */
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: white;
+  font-family: "Arial", sans-serif;
+}
+
+/* Logo Button */
+.logo-button {
+  background: none;
+  border: none;
+  color: #f3f4f6;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logo-button:hover {
+  color: #4ade80;
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-email {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.logout-button {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #e53935;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.border-magic-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 30px;
+  background-color: transparent;
+  color: #f3f4f6;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 14px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.border-magic-button:hover .border-magic-gradient {
+  transform: scaleX(1);
+}
+
+.border-magic-button:hover .border-magic-text {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.border-magic-gradient {
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    #e2cbff 0%,
+    #393bb2 50%,
+    #e2cbff 100%
+  );
+  transform: scaleX(0);
+  transform-origin: 50% 50%;
+  transition: transform 0.5s ease;
+}
+
+.border-magic-text {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Add hover effect */
+.border-magic-button:hover {
+  color: #333;
+  border-color: #4ade80;
+}
+
+.border-magic-button:focus {
+  outline: none;
+  border-color: #4ade80;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-links {
+    margin-top: 15px;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+body {
+  background-image: url("https://hubballidharwadinfra.com/wp-content/uploads/2022/02/iiit-dharwad-placement.jpg"); /* Root-relative path for public folder assets */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}

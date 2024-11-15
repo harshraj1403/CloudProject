@@ -1,0 +1,100 @@
+/* Style for the form container */
+.create {
+    max-width: 800px; /* Set a maximum width for the form */
+    width: 100%; /* Allow the form to take up the full available width, but not exceed max-width */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px; /* Add padding inside the form */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners for the form */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a soft shadow for a floating effect */
+    display: flex; /* Flexbox to align items */
+    flex-direction: column; /* Stack the form elements vertically */
+    gap: 20px; /* Space between form fields */
+    font-family: 'Arial', sans-serif; /* Set a clean and modern font */
+}
+
+/* Style for form headings */
+.create h3 {
+    text-align: center; /* Center the form title */
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Style for form labels */
+.create label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Style for input fields */
+.create input {
+    width: 100%; /* Make the input fields take up full width */
+    padding: 10px; /* Add padding inside the input fields */
+    margin-bottom: 15px; /* Space between the input fields */
+    border-radius: 5px; /* Rounded corners for the inputs */
+    border: 1px solid #ddd; /* Light border color */
+    font-size: 1rem; /* Set a readable font size */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Input focus style */
+.create input:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Style for error input fields */
+.create .error {
+    border-color: red; /* Red border for error */
+}
+
+/* Style for the submit button */
+.create button {
+    padding: 12px 20px; /* Padding for the button */
+    font-size: 1.1rem; /* Larger text */
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Hover effect for button */
+.create button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Style for the error message */
+.create .error {
+    color: red;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Make the form responsive on small screens */
+@media (max-width: 600px) {
+    .create {
+        width: 90%; /* Allow the form to take up more space on smaller screens */
+        padding: 15px; /* Adjust padding */
+    }
+}
+
+/* Title with Red and Yellow Gradient */
+.create h3 {
+    font-size: 2rem; /* Reduced font size */
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(45deg, #d32f2f, #ffeb3b); /* Bright Red and Yellow Gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+    margin-bottom: 15px; /* Reduced margin */
+    text-transform: uppercase;
+    letter-spacing: 1.2px; /* Slightly tighter letter spacing */
+    padding: 8px; /* Reduced padding */
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Reduced shadow */
+}
+

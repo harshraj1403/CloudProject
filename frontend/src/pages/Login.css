@@ -1,0 +1,139 @@
+/* Form Container */
+.login {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideIn 0.5s ease-in-out;
+  position: relative;
+}
+
+/* Title */
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(to left, #ff512f, #dd2476);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+/* Labels */
+label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+  display: inline-block;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focused Input Fields */
+input:focus {
+  border-color: #2575fc;
+  outline: none;
+  box-shadow: 0 0 8px rgba(37, 117, 252, 0.2);
+  background-color: #fff;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover and Active Effects for Button */
+button:hover {
+  background: linear-gradient(45deg, #2575fc, #ff512f);
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+.error {
+  color: #ff6347;
+  font-size: 1rem;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Animation for Form */
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .login {
+    padding: 30px 20px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  input {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+/* Subtle Hover Effect for Inputs */
+input:hover {
+  border-color: #2575fc;
+  box-shadow: 0 0 8px rgba(37, 117, 252, 0.1);
+}
+
+/* Subtle Hover Effect for Button when Disabled */
+button:disabled:hover {
+  transform: scale(1); /* Disable hover effect when button is disabled */
+  background-color: #bbb;
+}

@@ -1,0 +1,144 @@
+/* Centered Form Container */
+.create {
+    background: linear-gradient(135deg, #f3f4f6, #e2e8f0);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+    transition: transform 0.3s ease;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  /* Title */
+  .create h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  /* Labels */
+  .create label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+  }
+  
+  /* Input Fields */
+  .create input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 2px solid #cbd5e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #2d3748;
+    background-color: #edf2f7;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Focused Input Fields */
+  .create input:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.4);
+  }
+  
+  /* Button */
+  .create button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Button Hover Effect */
+  .create button:hover {
+    background: linear-gradient(45deg, #764ba2, #667eea);
+    transform: translateY(-3px);
+  }
+  
+  /* Disabled Button */
+  .create button:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+  }
+  
+  /* Error Message */
+  .create .error {
+    color: #e53e3e;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .create {
+      padding: 30px 15px;
+    }
+  
+    .create h3 {
+      font-size: 1.5rem;
+    }
+  
+    .create input {
+      padding: 12px;
+      font-size: 1rem;
+    }
+  
+    .create button {
+      padding: 12px;
+      font-size: 1rem;
+    }
+  }
+
+  /* Title */
+/* Title with Red and Yellow Gradient */
+/* Title with Red and Yellow Gradient */
+.create h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(45deg, #d32f2f, #ffeb3b); /* Bright Red (#d32f2f) and Yellow (#ffeb3b) Gradient */
+    -webkit-background-clip: text; /* Ensures the gradient is applied to the text */
+    background-clip: text;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+  
+  
